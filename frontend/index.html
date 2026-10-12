@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Auto - Acasă</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-service">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🔧 Service Auto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Servicii</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html">Programări</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prețuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div id="user-info-nav" class="d-none navbar-nav align-items-center gap-2">
+          <a class="nav-link" href="profile.html">Profil</a>
+          <div class="user-info-nav">
+            <span class="user-name">Ion Popescu</span>
+            <span class="user-email">ion.popescu@email.ro</span>
+          </div>
+          <a class="btn btn-outline-light btn-sm" href="index.html" onclick="localStorage.removeItem('serviceAutoUser'); return true;">Deconectare</a>
+        </div>
+        <div id="login-register-nav" class="navbar-nav gap-2">
+          <a class="btn btn-outline-light btn-sm" href="login.html">Autentificare</a>
+          <a class="btn btn-warning btn-sm" href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero-section text-center">
+      <h1>Bine ați venit la Service Auto</h1>
+      <p class="lead">Servicii profesionale de reparații auto, revizii și mentenanță. Încredere și calitate de peste 15 ani.</p>
+      <a href="appointments.html" class="btn btn-warning btn-lg">Programează-te acum</a>
+    </section>
+
+    <h2 class="page-title">De ce să ne alegeți?</h2>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center p-4">
+            <div class="icon-box mx-auto mb-3">⚙️</div>
+            <h5 class="card-title">Experiență</h5>
+            <p class="card-text">Echipă certificată și peste 15 ani de experiență în domeniul auto.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center p-4">
+            <div class="icon-box mx-auto mb-3">💰</div>
+            <h5 class="card-title">Prețuri corecte</h5>
+            <p class="card-text">Transparență totală. Fără surprize la final. Devis gratuit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center p-4">
+            <div class="icon-box mx-auto mb-3">🛡️</div>
+            <h5 class="card-title">Garanție</h5>
+            <p class="card-text">Garanție pe toate reparațiile și piese de schimb originale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="page-title">Servicii populare</h2>
+    <div class="row g-3">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Revizie periodică</h6>
+            <p class="card-text small">Ulei, filtre, verificări</p>
+            <a href="services.html#revizie" class="btn btn-primary btn-sm">Detalii</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Frane</h6>
+            <p class="card-text small">Plațe, discuri, lichid</p>
+            <a href="services.html#frane" class="btn btn-primary btn-sm">Detalii</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Amortizoare</h6>
+            <p class="card-text small">Verificare și înlocuire</p>
+            <a href="services.html#amortizoare" class="btn btn-primary btn-sm">Detalii</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Diagnostic</h6>
+            <p class="card-text small">Calculatoare, erori</p>
+            <a href="services.html#diagnostic" class="btn btn-primary btn-sm">Detalii</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-service text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Service Auto. Toate drepturile rezervate. | <a href="contact.html">Contact</a> | <a href="about.html">Despre noi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

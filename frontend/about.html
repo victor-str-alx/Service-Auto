@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Auto - Despre noi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-service">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🔧 Service Auto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Servicii</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html">Programări</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prețuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div id="user-info-nav" class="d-none navbar-nav align-items-center gap-2">
+          <a class="nav-link" href="profile.html">Profil</a>
+          <div class="user-info-nav">
+            <span class="user-name">Ion Popescu</span>
+            <span class="user-email">ion.popescu@email.ro</span>
+          </div>
+          <a class="btn btn-outline-light btn-sm" href="index.html" onclick="localStorage.removeItem('serviceAutoUser'); return true;">Deconectare</a>
+        </div>
+        <div id="login-register-nav" class="navbar-nav gap-2">
+          <a class="btn btn-outline-light btn-sm" href="login.html">Autentificare</a>
+          <a class="btn btn-warning btn-sm" href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Despre Service Auto</h1>
+
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <p class="lead">Suntem un service auto modern, cu peste 15 ani de experiență în reparații, revizii și mentenanță auto.</p>
+        <p>Service Auto s-a construit pe principii de transparență, calitate și respect față de client. Folosim piese de calitate și echipamente profesionale, iar mecanicii noștri sunt certificați și actualizați constant.</p>
+        <p>Oferim devis gratuit înainte de orice reparație și garantăm toate lucrările efectuate. Clienții noștri revin pentru că știu că pot avea încredere în serviciile noastre.</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cifre</h5>
+            <p class="display-6 text-primary mb-0">15+</p>
+            <p class="small mb-0">ani experiență</p>
+            <hr>
+            <p class="mb-0">Mii de clienți mulțumiți și mașini reparate corect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="h5 text-primary mb-3">Misiunea noastră</h2>
+    <p>Să oferim reparații auto de încredere, la prețuri corecte și cu comunicare clară, astfel încât fiecare client să plece mulțumit și cu mașina în siguranță.</p>
+
+    <h2 class="h5 text-primary mb-3">Valori</h2>
+    <ul>
+      <li><strong>Integritate</strong> – lucrăm corect, fără reparații inutile</li>
+      <li><strong>Calitate</strong> – piese și manoperă la standarde înalte</li>
+      <li><strong>Transparență</strong> – prețuri și devisuri clare</li>
+      <li><strong>Respect</strong> – pentru timpul și banii clienților</li>
+    </ul>
+  </main>
+
+  <footer class="footer-service text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Service Auto. Toate drepturile rezervate. | <a href="contact.html">Contact</a> | <a href="about.html">Despre noi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

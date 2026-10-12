@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Auto - Servicii</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-service">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🔧 Service Auto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Servicii</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html">Programări</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prețuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div id="user-info-nav" class="d-none navbar-nav align-items-center gap-2">
+          <a class="nav-link" href="profile.html">Profil</a>
+          <div class="user-info-nav">
+            <span class="user-name">Ion Popescu</span>
+            <span class="user-email">ion.popescu@email.ro</span>
+          </div>
+          <a class="btn btn-outline-light btn-sm" href="index.html" onclick="localStorage.removeItem('serviceAutoUser'); return true;">Deconectare</a>
+        </div>
+        <div id="login-register-nav" class="navbar-nav gap-2">
+          <a class="btn btn-outline-light btn-sm" href="login.html">Autentificare</a>
+          <a class="btn btn-warning btn-sm" href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Serviciile noastre</h1>
+    <p class="lead mb-4">Oferim o gamă completă de servicii pentru autoturismele dumneavoastră. Calitate și prețuri corecte.</p>
+
+    <div class="row g-4">
+      <div class="col-lg-6" id="revizie">
+        <div class="card h-100">
+          <div class="card-header">Revizie periodică</div>
+          <div class="card-body">
+            <p class="card-text">Schimb ulei și filtre (ulei, aer, habitaclu, combustibil), verificare nivel lichide, etanșeități, curea distribuție. Conform cărții mașinii.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează revizie</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" id="frane">
+        <div class="card h-100">
+          <div class="card-header">Sistem frânare</div>
+          <div class="card-body">
+            <p class="card-text">Înlocuire plăcuțe și discuri frână, schimb lichid frână, verificare etrieri și conducte. Siguranța ta este prioritatea noastră.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" id="amortizoare">
+        <div class="card h-100">
+          <div class="card-header">Amortizoare și suspensie</div>
+          <div class="card-body">
+            <p class="card-text">Verificare și înlocuire amortizoare, arcouri, bielete, silent blocuri. Geometrie și echilibrare roți.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" id="diagnostic">
+        <div class="card h-100">
+          <div class="card-header">Diagnostic electronic</div>
+          <div class="card-body">
+            <p class="card-text">Citire erori din calculatoare (motor, ABS, airbag etc.), ștergere defecte, raport detaliat. Echipament profesional.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-header">Motor și transmisie</div>
+          <div class="card-body">
+            <p class="card-text">Reparații motor, schimb embrayaj, reparații cutie de viteze, distribuite. Mecanici specializați.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-header">Climatizare și încălzire</div>
+          <div class="card-body">
+            <p class="card-text">Umplere gaz climatizare, verificare compresor, reparații sistem încălzire. Confort în orice sezon.</p>
+            <a href="appointments.html" class="btn btn-primary">Programează</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-service text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Service Auto. Toate drepturile rezervate. | <a href="contact.html">Contact</a> | <a href="about.html">Despre noi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

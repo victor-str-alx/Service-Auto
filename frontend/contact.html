@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Auto - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-service">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🔧 Service Auto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Servicii</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html">Programări</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prețuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div id="user-info-nav" class="d-none navbar-nav align-items-center gap-2">
+          <a class="nav-link" href="profile.html">Profil</a>
+          <div class="user-info-nav">
+            <span class="user-name">Ion Popescu</span>
+            <span class="user-email">ion.popescu@email.ro</span>
+          </div>
+          <a class="btn btn-outline-light btn-sm" href="index.html" onclick="localStorage.removeItem('serviceAutoUser'); return true;">Deconectare</a>
+        </div>
+        <div id="login-register-nav" class="navbar-nav gap-2">
+          <a class="btn btn-outline-light btn-sm" href="login.html">Autentificare</a>
+          <a class="btn btn-warning btn-sm" href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Contact</h1>
+    <p class="lead mb-4">Suntem aici pentru întrebări, programări sau oferte. Contactați-ne oricând.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="icon-box mx-auto mb-2">📍</div>
+            <h5 class="card-title">Adresă</h5>
+            <p class="card-text mb-0">Str. Exemplu nr. 10<br>Cluj-Napoca, 400000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="icon-box mx-auto mb-2">📞</div>
+            <h5 class="card-title">Telefon</h5>
+            <p class="card-text mb-0">0264-xxx-xxx<br>07xx-xxx-xxx</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="icon-box mx-auto mb-2">✉️</div>
+            <h5 class="card-title">Email</h5>
+            <p class="card-text mb-0">contact@service-auto.ro<br>programari@service-auto.ro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">Trimite un mesaj</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nume</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Subiect</label>
+                <input type="text" class="form-control" placeholder="Ex: Ofertă revizie">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mesaj</label>
+                <textarea class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Trimite</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card bg-light-custom">
+          <div class="card-body">
+            <h5 class="card-title">Program</h5>
+            <p class="mb-0">Luni – Vineri: 08:00 – 18:00<br>Sâmbătă: 08:00 – 14:00<br>Duminică: Închis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-service text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Service Auto. Toate drepturile rezervate. | <a href="contact.html">Contact</a> | <a href="about.html">Despre noi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

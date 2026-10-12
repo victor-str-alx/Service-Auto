@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Auto - Programări</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-service">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🔧 Service Auto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Servicii</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html">Programări</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prețuri</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div id="user-info-nav" class="d-none navbar-nav align-items-center gap-2">
+          <a class="nav-link" href="profile.html">Profil</a>
+          <div class="user-info-nav">
+            <span class="user-name">Ion Popescu</span>
+            <span class="user-email">ion.popescu@email.ro</span>
+          </div>
+          <a class="btn btn-outline-light btn-sm" href="index.html" onclick="localStorage.removeItem('serviceAutoUser'); return true;">Deconectare</a>
+        </div>
+        <div id="login-register-nav" class="navbar-nav gap-2">
+          <a class="btn btn-outline-light btn-sm" href="login.html">Autentificare</a>
+          <a class="btn btn-warning btn-sm" href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Programări</h1>
+    <p class="lead mb-4">Rezervă o oră la service. Completează formularul și te contactăm pentru confirmare.</p>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-header">Programează o vizită</div>
+          <div class="card-body">
+            <form id="appointment-form">
+              <div id="appointment-feedback" class="alert d-none" role="alert"></div>
+              <div class="mb-3">
+                <label class="form-label">Nume complet</label>
+                <input id="fullName" type="text" class="form-control" placeholder="Ex: Ion Popescu" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Telefon</label>
+                <input id="phone" type="tel" class="form-control" placeholder="07xx xxx xxx" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input id="email" type="email" class="form-control" placeholder="email@exemplu.ro" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Data preferată</label>
+                <input id="preferredDate" type="date" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Interval orar</label>
+                <select id="timeSlot" class="form-select">
+                  <option value="08:00 - 10:00">08:00 - 10:00</option>
+                  <option value="10:00 - 12:00">10:00 - 12:00</option>
+                  <option value="12:00 - 14:00">12:00 - 14:00</option>
+                  <option value="14:00 - 16:00">14:00 - 16:00</option>
+                  <option value="16:00 - 18:00">16:00 - 18:00</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Serviciu dorit</label>
+                <select id="serviceName" class="form-select">
+                  <option value="Revizie periodica">Revizie periodică</option>
+                  <option value="Frane">Frane</option>
+                  <option value="Amortizoare / suspensie">Amortizoare / suspensie</option>
+                  <option value="Diagnostic electronic">Diagnostic electronic</option>
+                  <option value="Motor / transmisie">Motor / transmisie</option>
+                  <option value="Climatizare">Climatizare</option>
+                  <option value="Altele">Altele</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Alege mașina</label>
+                <select id="vehicleId" class="form-select" required>
+                  <option value="">-- Se incarca masinile tale --</option>
+                </select>
+                <div id="vehicle-help" class="form-text text-danger d-none"></div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mesaj (opțional)</label>
+                <textarea id="notes" class="form-control" rows="3" placeholder="Descriere problemă sau cerințe speciale..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Trimite programarea</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card bg-light-custom">
+          <div class="card-body">
+            <h5 class="card-title">Program lucru</h5>
+            <ul class="list-unstyled mb-0">
+              <li><strong>Luni – Vineri:</strong> 08:00 – 18:00</li>
+              <li><strong>Sâmbătă:</strong> 08:00 – 14:00</li>
+              <li><strong>Duminică:</strong> Închis</li>
+            </ul>
+            <hr>
+            <p class="mb-0">Pentru urgențe putem fi contactați la <strong>0264-xxx-xxx</strong>. Programările se confirmă telefonic sau prin email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-service text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Service Auto. Toate drepturile rezervate. | <a href="contact.html">Contact</a> | <a href="about.html">Despre noi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+</body>
+</html>
