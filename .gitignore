@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Local SDK/cache created for this project
+.dotnet/
+.local/
+.nuget/
+.templateengine/
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Local dotnet tools cache
+**/.tools/

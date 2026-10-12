@@ -1,0 +1,61 @@
+@model ServiceAutoApp.Models.Appointment
+
+@{
+    ViewData["Title"] = "Editeaza programare";
+}
+
+<h1>Editeaza programare</h1>
+
+<div class="row">
+    <div class="col-md-7">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="AppointmentDate" class="form-label"></label>
+                <input asp-for="AppointmentDate" type="datetime-local" class="form-control" />
+                <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="TimeSlot" class="form-label">Interval orar</label>
+                <select asp-for="TimeSlot" class="form-select">
+                    <option value="08:00 - 10:00">08:00 - 10:00</option>
+                    <option value="10:00 - 12:00">10:00 - 12:00</option>
+                    <option value="12:00 - 14:00">12:00 - 14:00</option>
+                    <option value="14:00 - 16:00">14:00 - 16:00</option>
+                    <option value="16:00 - 18:00">16:00 - 18:00</option>
+                </select>
+                <span asp-validation-for="TimeSlot" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="CustomerId" class="form-label">Client</label>
+                <select asp-for="CustomerId" asp-items="ViewBag.CustomerOptions" class="form-select"></select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="VehicleId" class="form-label">Vehicul</label>
+                <select asp-for="VehicleId" asp-items="ViewBag.VehicleOptions" class="form-select"></select>
+                <span asp-validation-for="VehicleId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EmployeeId" class="form-label">Angajat</label>
+                <select asp-for="EmployeeId" asp-items="ViewBag.EmployeeOptions" class="form-select"></select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Serviciu</label>
+                <select name="serviceTypeId" asp-items="ViewBag.ServiceTypeOptions" class="form-select"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Notes" class="form-label"></label>
+                <textarea asp-for="Notes" class="form-control"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizeaza</button>
+            <a asp-action="Index" class="btn btn-secondary">Inapoi</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,42 @@
+@model IEnumerable<ServiceAutoApp.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Programari";
+}
+
+<h1>Programari</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adauga programare</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Interval</th>
+            <th>Client</th>
+            <th>Vehicul</th>
+            <th>Angajat</th>
+            <th>Serviciu</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        var serviceName = item.AppointmentServices.FirstOrDefault()?.ServiceType?.Name ?? "-";
+        <tr>
+            <td>@item.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
+            <td>@item.TimeSlot</td>
+            <td>@item.Customer?.FullName</td>
+            <td>@item.Vehicle?.Brand @item.Vehicle?.Model</td>
+            <td>@item.Employee?.FullName</td>
+            <td>@serviceName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

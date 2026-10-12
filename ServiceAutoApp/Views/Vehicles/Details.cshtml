@@ -1,0 +1,21 @@
+@model ServiceAutoApp.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Detalii vehicul";
+}
+
+<h1>Detalii vehicul</h1>
+
+<dl class="row">
+    <dt class="col-sm-3">Marca</dt>
+    <dd class="col-sm-9">@Model.Brand</dd>
+    <dt class="col-sm-3">Model</dt>
+    <dd class="col-sm-9">@Model.Model</dd>
+    <dt class="col-sm-3">Numar inmatriculare</dt>
+    <dd class="col-sm-9">@Model.RegistrationNumber</dd>
+    <dt class="col-sm-3">Client</dt>
+    <dd class="col-sm-9">@Model.Customer?.FullName (@Model.Customer?.Email)</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Inapoi</a>

@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.dotnet": true,
+    "**/.local": true,
+    "**/.nuget": true,
+    "**/.templateengine": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/.tools": true
+  },
+  "search.exclude": {
+    "**/.dotnet": true,
+    "**/.local": true,
+    "**/.nuget": true,
+    "**/.templateengine": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/.tools": true
+  }
+}

@@ -1,0 +1,23 @@
+@model ServiceAutoApp.Models.Appointment
+
+@{
+    ViewData["Title"] = "Sterge programare";
+}
+
+<h1>Sterge programare</h1>
+<p>Esti sigur ca vrei sa stergi aceasta programare?</p>
+
+<dl class="row">
+    <dt class="col-sm-3">Data</dt>
+    <dd class="col-sm-9">@Model.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</dd>
+    <dt class="col-sm-3">Client</dt>
+    <dd class="col-sm-9">@Model.Customer?.FullName</dd>
+    <dt class="col-sm-3">Vehicul</dt>
+    <dd class="col-sm-9">@Model.Vehicle?.Brand @Model.Vehicle?.Model</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sterge</button>
+    <a asp-action="Index" class="btn btn-secondary">Renunta</a>
+</form>

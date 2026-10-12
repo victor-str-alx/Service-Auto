@@ -1,0 +1,28 @@
+@model IEnumerable<ServiceAutoApp.Models.AppointmentService>
+
+@{
+    ViewData["Title"] = "Legaturi Programari-Servicii";
+}
+
+<h1>Legaturi Programari-Servicii</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Programare ID</th>
+            <th>Data programare</th>
+            <th>Client</th>
+            <th>Serviciu</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.AppointmentId</td>
+            <td>@item.Appointment?.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
+            <td>@item.Appointment?.Customer?.FullName</td>
+            <td>@item.ServiceType?.Name</td>
+        </tr>
+}
+    </tbody>
+</table>

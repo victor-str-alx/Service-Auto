@@ -1,0 +1,25 @@
+@model ServiceAutoApp.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Sterge vehicul";
+}
+
+<h1>Sterge vehicul</h1>
+<p>Esti sigur ca vrei sa stergi acest vehicul?</p>
+
+<dl class="row">
+    <dt class="col-sm-3">Marca</dt>
+    <dd class="col-sm-9">@Model.Brand</dd>
+    <dt class="col-sm-3">Model</dt>
+    <dd class="col-sm-9">@Model.Model</dd>
+    <dt class="col-sm-3">Numar inmatriculare</dt>
+    <dd class="col-sm-9">@Model.RegistrationNumber</dd>
+    <dt class="col-sm-3">Client</dt>
+    <dd class="col-sm-9">@Model.Customer?.FullName</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sterge</button>
+    <a asp-action="Index" class="btn btn-secondary">Renunta</a>
+</form>

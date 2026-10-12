@@ -1,0 +1,28 @@
+@model ServiceAutoApp.Models.Appointment
+
+@{
+    ViewData["Title"] = "Detalii programare";
+    var serviceName = Model.AppointmentServices.FirstOrDefault()?.ServiceType?.Name ?? "-";
+}
+
+<h1>Detalii programare</h1>
+
+<dl class="row">
+    <dt class="col-sm-3">Data</dt>
+    <dd class="col-sm-9">@Model.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</dd>
+    <dt class="col-sm-3">Interval</dt>
+    <dd class="col-sm-9">@Model.TimeSlot</dd>
+    <dt class="col-sm-3">Client</dt>
+    <dd class="col-sm-9">@Model.Customer?.FullName (@Model.Customer?.Email)</dd>
+    <dt class="col-sm-3">Vehicul</dt>
+    <dd class="col-sm-9">@Model.Vehicle?.Brand @Model.Vehicle?.Model (@Model.Vehicle?.RegistrationNumber)</dd>
+    <dt class="col-sm-3">Angajat</dt>
+    <dd class="col-sm-9">@Model.Employee?.FullName</dd>
+    <dt class="col-sm-3">Serviciu</dt>
+    <dd class="col-sm-9">@serviceName</dd>
+    <dt class="col-sm-3">Notite</dt>
+    <dd class="col-sm-9">@Model.Notes</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Inapoi</a>

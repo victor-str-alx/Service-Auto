@@ -1,0 +1,17 @@
+@model ServiceAutoApp.Models.Employee
+
+@{
+    ViewData["Title"] = "Detalii angajat";
+}
+
+<h1>Detalii angajat</h1>
+
+<dl class="row">
+    <dt class="col-sm-3">Nume</dt>
+    <dd class="col-sm-9">@Model.FullName</dd>
+    <dt class="col-sm-3">Rol</dt>
+    <dd class="col-sm-9">@Model.Role</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Inapoi</a>

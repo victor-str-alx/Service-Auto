@@ -1,0 +1,46 @@
+@model IEnumerable<ServiceAutoApp.Models.Vehicle>
+
+@{
+    ViewData["Title"] = "Vehicule";
+}
+
+<h1>Vehicule</h1>
+
+@if (TempData["SuccessMessage"] is string successMessage)
+{
+    <div class="alert alert-success">@successMessage</div>
+}
+@if (TempData["ErrorMessage"] is string errorMessage)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adauga vehicul</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Model</th>
+            <th>Numar inmatriculare</th>
+            <th>Client</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.Brand</td>
+            <td>@item.Model</td>
+            <td>@item.RegistrationNumber</td>
+            <td>@item.Customer?.FullName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

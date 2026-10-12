@@ -1,0 +1,21 @@
+@model ServiceAutoApp.Models.Employee
+
+@{
+    ViewData["Title"] = "Sterge angajat";
+}
+
+<h1>Sterge angajat</h1>
+<p>Esti sigur ca vrei sa stergi acest angajat?</p>
+
+<dl class="row">
+    <dt class="col-sm-3">Nume</dt>
+    <dd class="col-sm-9">@Model.FullName</dd>
+    <dt class="col-sm-3">Rol</dt>
+    <dd class="col-sm-9">@Model.Role</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sterge</button>
+    <a asp-action="Index" class="btn btn-secondary">Renunta</a>
+</form>

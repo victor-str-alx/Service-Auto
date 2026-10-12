@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Service Auto - Dashboard";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Service Auto - Administrare</h1>
+    <p>Aplicatia foloseste ASP.NET Core MVC + EF Core (Code First), cu arhitectura pe straturi Controller - Service - Repository.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Servicii</h5>
+                <p class="card-text">Administrare servicii oferite de service.</p>
+                <a class="btn btn-outline-primary" asp-controller="ServiceTypes" asp-action="Index">Deschide</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Clienti</h5>
+                <p class="card-text">CRUD complet pentru clienti.</p>
+                <a class="btn btn-outline-primary" asp-controller="Customers" asp-action="Index">Deschide</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Vehicule</h5>
+                <p class="card-text">CRUD vehicule cu selectare client dupa nume/email.</p>
+                <a class="btn btn-outline-primary" asp-controller="Vehicles" asp-action="Index">Deschide</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Angajati</h5>
+                <p class="card-text">Administrare personal si roluri in service.</p>
+                <a class="btn btn-outline-primary" asp-controller="Employees" asp-action="Index">Deschide</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Programari</h5>
+                <p class="card-text">Vizualizare si management complet programari.</p>
+                <a class="btn btn-outline-primary" asp-controller="Appointments" asp-action="Index">Deschide</a>
+            </div>
+        </div>
+    </div>
+</div>
